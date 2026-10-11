@@ -1,0 +1,451 @@
+/* =================================
+   LOGIN MUSEUM BANDAR CIMANUK
+   Tema Mahogany, Cream, dan Peach
+================================= */
+
+* {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    margin: 0;
+    min-height: 100%;
+}
+
+body {
+    font-family: Georgia, "Times New Roman", serif;
+    background: #f5e7dc;
+    color: #38231c;
+}
+
+.login-container {
+    display: grid;
+    grid-template-columns: 1.05fr 0.95fr;
+    width: min(1180px, calc(100% - 56px));
+    min-height: 680px;
+    margin: 28px auto;
+    overflow: hidden;
+    background: #fff0e8;
+    box-shadow: 0 12px 40px rgba(65, 35, 24, 0.12);
+}
+
+/* =================================
+   BAGIAN KIRI
+================================= */
+
+.museum-side {
+    position: relative;
+    min-height: 680px;
+    overflow: hidden;
+    background: #4c2d20;
+    color: #fff8f0;
+}
+
+.museum-photo {
+    position: absolute;
+    inset: 0 0 108px;
+    background-image:
+        url("login-museum.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    transform: scale(1.01);
+}
+
+.photo-overlay {
+    position: absolute;
+    inset: 0 0 108px;
+    background:
+        linear-gradient(
+            90deg,
+            rgba(47, 29, 21, 0.76),
+            rgba(47, 29, 21, 0.23)
+        ),
+        linear-gradient(
+            0deg,
+            rgba(47, 29, 21, 0.38),
+            transparent 65%
+        );
+}
+
+.museum-title {
+    position: absolute;
+    top: 14%;
+    left: 7%;
+    right: 5%;
+    z-index: 1;
+}
+
+.eyebrow {
+    display: inline-block;
+    font-family: Arial, sans-serif;
+    font-size: 10px;
+    letter-spacing: 5px;
+    border-top: 1px solid rgba(255, 245, 230, 0.6);
+    padding-top: 10px;
+    margin-bottom: 18px;
+}
+
+.museum-title h1 {
+    margin: 0;
+    font-size: clamp(28px, 3.3vw, 43px);
+    font-weight: 500;
+    line-height: 1.15;
+    letter-spacing: 3px;
+}
+
+.museum-title p {
+    font-family: Arial, sans-serif;
+    font-size: 9px;
+    line-height: 1.9;
+    letter-spacing: 2px;
+    margin-top: 17px;
+}
+
+.museum-caption {
+    position: absolute;
+    z-index: 2;
+    inset: auto 0 0;
+    min-height: 108px;
+    background: #4b2d20;
+    padding: 18px 8%;
+}
+
+.museum-caption p {
+    font-size: 12px;
+    font-style: italic;
+    line-height: 1.6;
+    margin: 0 0 13px;
+}
+
+.museum-caption span {
+    font-family: Arial, sans-serif;
+    font-size: 8px;
+    letter-spacing: 2px;
+    line-height: 1.7;
+}
+
+/* =================================
+   BAGIAN KANAN
+================================= */
+
+.form-side {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 45px 35px;
+    background: #fff0e8;
+}
+
+.login-card {
+    width: 100%;
+    max-width: 390px;
+}
+
+.logo-wrapper {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 15px;
+}
+
+.museum-logo {
+    display: block;
+    width: 120px;
+    height: 100px;
+    object-fit: contain;
+}
+
+.login-card h2 {
+    margin: 0;
+    text-align: center;
+    font-size: 25px;
+    line-height: 1.3;
+    letter-spacing: 1.4px;
+    color: #241610;
+}
+
+.subtitle {
+    margin: 10px 0 25px;
+    text-align: center;
+    font-family: Arial, sans-serif;
+    font-size: 11px;
+    line-height: 1.7;
+    color: #765b4e;
+}
+
+.welcome-label {
+    width: 100%;
+    padding: 9px 0;
+    margin-bottom: 24px;
+    border: 1px solid #efd2bc;
+    border-radius: 30px;
+    background: #f4dfcf;
+    color: #8b6d5c;
+    text-align: center;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+/* =================================
+   INPUT
+================================= */
+
+.form-group {
+    margin-bottom: 19px;
+}
+
+.form-group > label {
+    display: block;
+    margin: 0 0 8px 5px;
+    font-family: Arial, sans-serif;
+    font-size: 12px;
+    font-weight: bold;
+    color: #38231c;
+}
+
+.input-wrapper {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    min-height: 43px;
+    padding: 0 12px;
+    border: 1px solid #ecd3bf;
+    border-radius: 30px;
+    background: #faf5f0;
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.input-wrapper:focus-within {
+    border-color: #8b4b36;
+    box-shadow: 0 0 0 3px rgba(139, 75, 54, 0.1);
+}
+
+.input-icon {
+    margin-right: 9px;
+    color: #947969;
+    font-size: 18px;
+}
+
+.input-wrapper input {
+    width: 100%;
+    min-width: 0;
+    border: 0;
+    outline: none;
+    background: transparent;
+    color: #38231c;
+    font-family: Arial, sans-serif;
+    font-size: 12px;
+    padding: 10px 0;
+}
+
+.input-wrapper input::placeholder {
+    color: #a8998e;
+}
+
+.toggle-password {
+    border: 0;
+    padding: 5px;
+    background: transparent;
+    color: #80695b;
+    cursor: pointer;
+    font-size: 17px;
+}
+
+/* =================================
+   OPSI LOGIN
+================================= */
+
+.form-options {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+    margin: -5px 5px 20px;
+    font-family: Arial, sans-serif;
+    font-size: 10px;
+}
+
+.remember {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    cursor: pointer;
+}
+
+.remember input {
+    accent-color: #7b4033;
+    margin: 0;
+}
+
+.form-options a {
+    color: #876759;
+    text-decoration: underline;
+}
+
+/* =================================
+   TOMBOL MASUK
+================================= */
+
+.login-button {
+    display: block;
+    width: 100%;
+    min-height: 45px;
+    border: 1px solid #edcfb6;
+    border-radius: 30px;
+    background: #f6e1d1;
+    color: #765b4d;
+    font-family: Arial, sans-serif;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.login-button:hover {
+    background: #7b4033;
+    color: #fff8f0;
+    border-color: #7b4033;
+}
+
+.login-button:active {
+    transform: scale(0.99);
+}
+
+/* =================================
+   INFORMASI KEAMANAN
+================================= */
+
+.security-notice {
+    display: flex;
+    align-items: center;
+    gap: 11px;
+    width: fit-content;
+    max-width: 100%;
+    margin: 27px auto 0;
+    padding: 12px 15px;
+    border-radius: 8px;
+    background: #eaded2;
+    color: #5b4235;
+}
+
+.security-icon {
+    display: grid;
+    place-items: center;
+    width: 27px;
+    height: 27px;
+    flex-shrink: 0;
+    border-radius: 50%;
+    background: #d6c4b3;
+    font-size: 15px;
+}
+
+.security-notice strong {
+    display: block;
+    font-family: Arial, sans-serif;
+    font-size: 10px;
+    margin-bottom: 4px;
+}
+
+.security-notice p {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    font-size: 9px;
+    line-height: 1.6;
+}
+
+/* =================================
+   PESAN ERROR
+================================= */
+
+.error-message {
+    padding: 11px 13px;
+    margin-bottom: 18px;
+    border: 1px solid #e6b7ae;
+    border-radius: 7px;
+    background: #f9e3df;
+    color: #8b3027;
+    font-family: Arial, sans-serif;
+    font-size: 12px;
+    line-height: 1.5;
+}
+
+/* =================================
+   RESPONSIVE
+================================= */
+
+@media (max-width: 850px) {
+    .login-container {
+        grid-template-columns: 1fr 1fr;
+        width: calc(100% - 30px);
+        margin: 15px auto;
+        min-height: 620px;
+    }
+
+    .museum-side {
+        min-height: 620px;
+    }
+
+    .form-side {
+        padding: 30px 22px;
+    }
+
+    .museum-title h1 {
+        font-size: 28px;
+        letter-spacing: 2px;
+    }
+
+    .login-card h2 {
+        font-size: 21px;
+    }
+}
+
+@media (max-width: 600px) {
+    .login-container {
+        grid-template-columns: 1fr;
+        width: 100%;
+        min-height: 100vh;
+        margin: 0;
+    }
+
+    .museum-side {
+        min-height: 245px;
+    }
+
+    .museum-photo,
+    .photo-overlay {
+        inset: 0;
+    }
+
+    .museum-title {
+        top: 12%;
+        left: 7%;
+    }
+
+    .museum-title h1 {
+        font-size: 27px;
+    }
+
+    .museum-title p {
+        margin-top: 9px;
+    }
+
+    .museum-caption {
+        display: none;
+    }
+
+    .form-side {
+        padding: 35px 24px;
+    }
+
+    .login-card {
+        max-width: 420px;
+    }
+
+    .museum-logo {
+        width: 95px;
+        height: 80px;
+    }
+}
