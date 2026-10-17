@@ -3,7 +3,7 @@
 $host = "localhost";
 $user = "root";
 $pass = "";
-$db   = "museum_cimanuk";
+$db   = "museum-cimanuk";
 
 $conn = new mysqli($host, $user, $pass, $db);
 if ($conn->connect_error) {

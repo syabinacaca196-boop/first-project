@@ -1,0 +1,478 @@
+/* ==========================================
+   INTRO / HERO KOLEKSI
+========================================== */
+
+.collection-intro-hero {
+    min-height: 240px;
+
+    display: grid;
+    grid-template-columns: 1.1fr .9fr;
+
+    align-items: center;
+
+    padding: 24px 6% 20px;
+
+    overflow: hidden;
+
+    background:
+        linear-gradient(
+            110deg,
+            #f4ddce 0%,
+            #f8e7dc 55%,
+            #f8e4d7 100%
+        );
+}
+
+
+/* TEXT */
+
+.intro-text {
+    position: relative;
+    z-index: 2;
+
+    max-width: 570px;
+}
+
+
+.breadcrumb {
+    margin-bottom: 13px;
+
+    font-size: 7px;
+    letter-spacing: 2.5px;
+
+    color: #8b6957;
+}
+
+.breadcrumb span {
+    margin: 0 7px;
+    color: #b88a6d;
+}
+
+
+.intro-label {
+    display: flex;
+    align-items: center;
+
+    gap: 8px;
+
+    font-size: 7px;
+    letter-spacing: 3px;
+
+    color: #a87e65;
+}
+
+.intro-label span {
+    width: 60px;
+    height: 1px;
+
+    background: #b79379;
+}
+
+
+.intro-text h1 {
+    margin-top: 5px;
+
+    font-family: 'Cormorant Garamond', serif;
+
+    font-size: 43px;
+    line-height: .90;
+
+    font-weight: 600;
+
+    color: #583823;
+}
+
+.intro-text h1 strong {
+    display: block;
+
+    color: #c39658;
+
+    font-weight: 600;
+}
+
+
+.intro-text p {
+    max-width: 510px;
+
+    margin-top: 12px;
+
+    font-size: 9px;
+    line-height: 1.7;
+
+    color: #725b4e;
+}
+
+
+/* ILUSTRASI */
+
+.intro-art {
+    height: 205px;
+
+    position: relative;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.intro-art img {
+    position: relative;
+    z-index: 2;
+
+    width: 90%;
+    height: 100%;
+
+    object-fit: contain;
+
+    filter:
+        drop-shadow(
+            0 7px 10px
+            rgba(80,45,27,.09)
+        );
+}
+
+
+.art-glow {
+    position: absolute;
+
+    width: 290px;
+    height: 160px;
+
+    border-radius: 50%;
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(255,247,236,.80),
+            rgba(255,247,236,0)
+        );
+}
+
+
+/* ==========================================
+   CONTENT
+========================================== */
+
+.collection-page {
+    padding: 24px 6% 45px;
+
+    background:
+        linear-gradient(
+            180deg,
+            #fff1e9,
+            #fff9f5
+        );
+}
+
+
+/* ==========================================
+   HEADING
+========================================== */
+
+.collection-heading {
+    display: flex;
+    align-items: flex-end;
+
+    gap: 15px;
+}
+
+.collection-heading > div:first-child {
+    flex-shrink: 0;
+}
+
+
+.collection-heading span {
+    display: block;
+
+    margin-bottom: 3px;
+
+    font-size: 7px;
+    letter-spacing: 3px;
+
+    color: #af8167;
+}
+
+
+.collection-heading h2 {
+    font-family: 'Cormorant Garamond', serif;
+
+    font-size: 30px;
+    font-weight: 600;
+
+    color: #563521;
+}
+
+
+.heading-decoration {
+    width: 120px;
+    height: 1px;
+
+    margin-bottom: 9px;
+
+    background:
+        linear-gradient(
+            to right,
+            #a77b60,
+            transparent
+        );
+}
+
+
+/* ==========================================
+   FILTER
+========================================== */
+
+.filter-buttons {
+    display: flex;
+    flex-wrap: wrap;
+
+    gap: 9px;
+
+    margin: 17px 0 20px;
+}
+
+
+.filter-btn {
+    min-width: 74px;
+
+    padding: 7px 17px;
+
+    border: 1px solid #dbbba4;
+    border-radius: 999px;
+
+    background: rgba(255,255,255,.20);
+
+    color: #74523e;
+
+    font-family: 'Poppins', sans-serif;
+    font-size: 8.5px;
+
+    cursor: pointer;
+
+    transition: .22s ease;
+}
+
+
+.filter-btn:hover,
+.filter-btn.active {
+    background: #64432f;
+
+    color: white;
+
+    border-color: #64432f;
+
+    box-shadow:
+        0 5px 12px
+        rgba(82,48,30,.10);
+}
+
+
+/* ==========================================
+   GRID
+========================================== */
+
+.all-collection-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    gap: 20px;
+}
+
+
+/* ==========================================
+   CARD
+========================================== */
+
+.museum-collection-card {
+    min-width: 0;
+
+    overflow: hidden;
+
+    background: #fffaf7;
+
+    border: 1px solid #edd7c8;
+    border-radius: 17px;
+
+    box-shadow:
+        0 7px 18px
+        rgba(77,43,26,.07);
+
+    transition: .25s ease;
+}
+
+
+.museum-collection-card:hover {
+    transform: translateY(-5px);
+
+    box-shadow:
+        0 15px 27px
+        rgba(77,43,26,.13);
+}
+
+
+/* IMAGE */
+
+.museum-collection-image {
+    height: 205px;
+
+    position: relative;
+
+    overflow: hidden;
+}
+
+
+.museum-collection-image img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    transition: .4s ease;
+}
+
+
+.museum-collection-card:hover
+.museum-collection-image img {
+    transform: scale(1.045);
+}
+
+
+/* CATEGORY */
+
+.collection-category {
+    position: absolute;
+
+    top: 12px;
+    left: 12px;
+
+    padding: 5px 11px;
+
+    border-radius: 999px;
+
+    background: rgba(76,45,29,.88);
+
+    color: white;
+
+    font-size: 7.5px;
+
+    backdrop-filter: blur(4px);
+}
+
+
+/* ==========================================
+   CARD CONTENT
+========================================== */
+
+.museum-collection-info {
+    padding: 16px 17px 17px;
+}
+
+
+.collection-number {
+    font-size: 6.5px;
+
+    letter-spacing: 2.2px;
+
+    color: #b17e64;
+}
+
+
+.museum-collection-info h3 {
+    margin-top: 6px;
+
+    font-family: 'Cormorant Garamond', serif;
+
+    font-size: 20px;
+    line-height: 1.15;
+
+    color: #54331f;
+}
+
+
+.museum-collection-info p {
+    min-height: 55px;
+
+    margin-top: 7px;
+
+    font-size: 8px;
+    line-height: 1.65;
+
+    color: #826b5d;
+}
+
+
+/* DETAIL */
+
+.detail-link {
+    display: inline-flex;
+    align-items: center;
+
+    gap: 7px;
+
+    margin-top: 10px;
+
+    color: #674630;
+
+    font-size: 8.5px;
+    font-weight: 500;
+
+    text-decoration: none;
+}
+
+
+.detail-link i {
+    font-size: 7px;
+
+    transition: transform .2s ease;
+}
+
+
+.detail-link:hover i {
+    transform: translateX(4px);
+}
+
+
+/* ==========================================
+   RESPONSIVE
+========================================== */
+
+@media (max-width: 1000px) {
+
+    .collection-intro-hero {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .all-collection-grid {
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+}
+
+
+@media (max-width: 700px) {
+
+    .collection-intro-hero {
+        grid-template-columns: 1fr;
+
+        padding: 30px 25px;
+    }
+
+    .intro-art {
+        height: 175px;
+
+        margin-top: 15px;
+    }
+
+    .collection-page {
+        padding:
+            25px 25px 45px;
+    }
+
+    .all-collection-grid {
+        grid-template-columns: 1fr;
+    }
+}

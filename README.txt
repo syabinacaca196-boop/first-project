@@ -1,20 +1,33 @@
-MUSEUM BANDAR CIMANUK - ADMIN CRUD
-==================================
-Kebutuhan: Laragon, Apache, MySQL, PHP 8+.
+MUSEUM BANDAR CIMANUK
+=====================
+Local stack: XAMPP, Apache, MySQL/MariaDB, PHP 8+.
 
-CARA PASANG
-1. Ekstrak folder museum_bandar_cimanuk ke C:\laragon\www\ sehingga ada C:\laragon\www\museum_bandar_cimanuk\dashboard.php.
-2. Buka Laragon, klik Start All.
-3. Klik Database atau buka http://localhost/phpmyadmin.
-4. Pilih tab Import, pilih file database.sql dari folder project, lalu klik Import/Go. Alternatif: buka tab SQL, salin seluruh isi database.sql, lalu jalankan.
-5. Pastikan database museum_cimanuk dan tabel admin, beranda, jelajah, koleksi, galeri, artikel, kontak terbentuk.
-6. Buka http://localhost/museum_bandar_cimanuk/login.php
-7. Login demo: username admin, password admin123.
-8. Dashboard lalu klik Beranda/Jelajah/Koleksi/Galeri/Artikel/Kontak. Setiap halaman memiliki tambah, edit, hapus.
-9. Untuk keluar klik Logout.
+FOLDER DAN URL
+- Admin project: C:\xampp\htdocs\admin
+- Visitor site: C:\xampp\htdocs\museum-cimanuk
+- Visitor website: http://localhost/museum-cimanuk/
+- Admin login: http://localhost/admin/login.php
+- Admin demo account: username admin, password admin123
 
-CATATAN
-- Koneksi default Laragon: user root, password kosong. Jika MySQL Anda memakai password, ubah koneksi.php.
-- Field gambar pada versi ini menyimpan NAMA FILE saja, belum mengunggah file gambar. Taruh gambar website di folder assets/images jika nanti fitur upload ditambahkan.
-- Tautan "Lihat Website" diarahkan ke ../index.php. Sesuaikan jika halaman publik Anda ada di lokasi lain.
-- Ini kerangka CRUD admin dasar. Sebelum dipublikasikan, tambahkan CSRF protection, validasi lebih lengkap, pembatasan upload gambar, dan ganti password demo.
+DATABASE BARU
+1. Start Apache and MySQL in XAMPP.
+2. Open http://localhost/phpmyadmin.
+3. Import database.sql from C:\xampp\htdocs\admin.
+4. Open the visitor website and admin login URLs above.
+
+DATABASE YANG SUDAH ADA
+- Back up the museum-cimanuk database first.
+- Import database_upgrade.sql through phpMyAdmin. The upgrade adds the category relationship, opening hours, publish/order metadata, contact fields, and visitor-message table without deleting existing content.
+- The admin and visitor pages use the same museum-cimanuk database.
+
+PENGELOLAAN
+- Admin menus manage homepage content, Jelajah sections, collection categories/items, gallery photos, articles, contact details, opening hours, and visitor messages.
+- Images uploaded from admin are stored in C:\xampp\htdocs\admin\assets\uploads.
+- Article and collection detail URLs use their database IDs.
+- Visitor search covers published collections and articles.
+- Contact messages appear in the admin inbox. Opening a message marks it as read.
+
+KONFIGURASI
+- Default XAMPP MySQL connection uses user root, an empty password, and port 3306.
+- If MySQL uses a password or a different port, update admin\koneksi.php and admin\museum-cimanuk\config\koneksi.php to match.
+- Change the demo admin password before deployment beyond a local development machine.

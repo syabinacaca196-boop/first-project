@@ -33,6 +33,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <title>Login Admin - Museum Bandar Cimanuk</title>
     <!-- Hubungkan ke CSS yang sudah diperbaiki -->
     <link rel="stylesheet" href="assets/style.css">
+    <link rel="stylesheet" href="assets/admin-login.css">
 </head>
 <body class="login-split-body">
 
@@ -58,7 +59,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 
                 <!-- Logo Identitas Instansi Resmi Museum -->
                 <div class="logo-box">
-                    <img src="assets/img/logo-mbc.png" alt="Logo Museum Bandar Cimanuk" class="museum-logo-img">
+                    <img src="assets/uploads/logo.png" alt="Logo Museum Bandar Cimanuk" class="museum-logo-img">
                 </div>
                 
                 <h1 class="form-title">Masuk ke Akun Admin</h1>
